@@ -54,8 +54,21 @@
 		"Python": {
 			"show_whitespaces": "selection",
 			"hard_tabs": false,
-			"tab_size": 4,
+			"tab_size": 2,
 			"formatter": "prettier"
+		},
+		"C++": {
+			"formatter": {
+				"external": {
+					"command": "/usr/bin/clang-format",
+					"arguments": [
+						"--style={BasedOnStyle: Microsoft, ColumnLimit: 80}",
+						"-",
+						"--assume-filename={buffer_path}"
+					]
+				}
+			},
+			"format_on_save": "on"
 		}
 	},
 	// sexteen

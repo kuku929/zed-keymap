@@ -1,0 +1,45 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+    {
+        "context": "Workspace",
+        "bindings": {
+            "shift shift": "file_finder::Toggle"
+        }
+    },
+    {
+        "context": "Editor",
+        "bindings": {
+            "alt-f l": "project_panel::ToggleFocus",
+            "alt-j": "terminal_panel::ToggleFocus",
+            "alt-f w": "tab_switcher::Toggle",
+            "alt-h": "pane::ActivatePrevItem",
+            "alt-l": "pane::ActivateNextItem"
+        }
+    },
+    {
+        "context": "ProjectPanel",
+        "bindings": {
+            "alt-f h": "project_panel::ToggleFocus"
+        }
+    },
+    {
+        "context": "TabSwitcher",
+        "bindings": {
+            "j": "menu::SelectNext",
+            "k": "menu::SelectPrev",
+            "x": "tab_switcher::CloseSelectedItem"
+        }
+    },
+    {
+        "context": "Terminal",
+        "bindings": {
+            "alt-k": "terminal_panel::ToggleFocus"
+        }
+    }
+]

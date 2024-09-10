@@ -7,71 +7,72 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-	// Ctrl+c Ctrl+v settings----
-	// disable cursor blink
-	"cursor_blink": false,
-	// use relative line numbers
-	"relative_line_numbers": true,
-	// hide the scroll bar
-	"scrollbar": {
-		"show": "never"
-	},
-	// prevent the buffer from scrolling beyond the last line
-	"scroll_beyond_last_line": "off",
-	// allow cursor to reach edges of screen
-	"vertical_scroll_margin": 0,
-	"gutter": {
-		// disable line numbers completely:
-		"line_numbers": true
-	},
-	//-------------------------
-	// the only correct way to do it.
-	"terminal": {
-		"dock": "bottom"
-	},
-	"project_panel": {
-		"dock": "right"
-	},
-	// BS code
-	"base_keymap": "VSCode",
-	"theme": "One Hunter Classic",
-	"autosave": "on_focus_change",
-	// getting that ViMoneyy
-	"vim_mode": true,
-	"hard_tabs": true,
-	"tab_size": 4,
-	"formatter": "auto",
-	"indent_guides": {
-		"active_line_width": 2
-	},
-	"prettier": {
-		"tabWidth": 2,
-		"useTabs": true
-	},
-	"remove_trailing_whitespace_on_save": false,
-	// Python sucks
-	"languages": {
-		"Python": {
-			"show_whitespaces": "selection",
-			"hard_tabs": false,
-			"tab_size": 2,
-			"formatter": "prettier"
-		},
-		"C++": {
-			"formatter": {
-				"external": {
-					"command": "/usr/bin/clang-format",
-					"arguments": [
-						"--style={BasedOnStyle: Microsoft, ColumnLimit: 80}",
-						"-",
-						"--assume-filename={buffer_path}"
-					]
-				}
-			},
-			"format_on_save": "on"
-		}
-	},
-	// sexteen
-	"ui_font_size": 16,
-	"buffer_font_size": 16
+    // Ctrl+c Ctrl+v settings----
+    // disable cursor blink
+    "cursor_blink": false,
+    // use relative line numbers
+    "relative_line_numbers": true,
+    // hide the scroll bar
+    "scrollbar": {
+        "show": "never"
+    },
+    // prevent the buffer from scrolling beyond the last line
+    "scroll_beyond_last_line": "off",
+    // allow cursor to reach edges of screen
+    "vertical_scroll_margin": 0,
+    "gutter": {
+        // disable line numbers completely:
+        "line_numbers": true
+    },
+    //-------------------------
+    // the only correct way to do it.
+    "terminal": {
+        "dock": "bottom"
+    },
+    "project_panel": {
+        "dock": "right"
+    },
+    // BS code
+    "base_keymap": "VSCode",
+    "theme": "One Hunter Classic",
+    "autosave": "on_focus_change",
+    // getting that ViMoneyy
+    "vim_mode": true,
+    "hard_tabs": false,
+    "tab_size": 4,
+    "formatter": "auto",
+    "indent_guides": {
+        "active_line_width": 2
+    },
+    "prettier": {
+        "tabWidth": 2,
+        "useTabs": true
+    },
+    "remove_trailing_whitespace_on_save": false,
+    // Python sucks
+    "languages": {
+        "Python": {
+            "show_whitespaces": "selection",
+            "hard_tabs": false,
+            "tab_size": 4,
+            "formatter": "prettier",
+            "format_on_save": "on"
+        },
+        "C++": {
+            "formatter": {
+                "external": {
+                    "command": "/usr/bin/clang-format",
+                    "arguments": [
+                        "--style={BasedOnStyle: Microsoft, ColumnLimit: 80}",
+                        "-",
+                        "--assume-filename={buffer_path}"
+                    ]
+                }
+            },
+            "format_on_save": "on"
+        }
+    },
+    // sexteen
+    "ui_font_size": 16,
+    "buffer_font_size": 16
 }

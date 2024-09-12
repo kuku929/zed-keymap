@@ -15,6 +15,7 @@
     {
         "context": "Editor",
         "bindings": {
+            "alt-f z": "workspace::ToggleZoom",
             "alt-f l": "project_panel::ToggleFocus",
             "alt-j": "terminal_panel::ToggleFocus",
             "alt-f w": "tab_switcher::Toggle",

@@ -7,7 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-    // Ctrl+c Ctrl+v settings----
+    // Ctrl+c Ctrl+v settings---
     // disable cursor blink
     "cursor_blink": false,
     // use relative line numbers
@@ -25,6 +25,7 @@
         "line_numbers": true
     },
     //-------------------------
+    "current_line_highlight": "gutter",
     // the only correct way to do it.
     "terminal": {
         "dock": "bottom"
@@ -34,7 +35,7 @@
     },
     // BS code
     "base_keymap": "VSCode",
-    "theme": "One Hunter Classic",
+    "theme": "Monosami Light",
     "autosave": "on_focus_change",
     // getting that ViMoneyy
     "vim_mode": true,
@@ -49,6 +50,7 @@
         "useTabs": true
     },
     "remove_trailing_whitespace_on_save": false,
+    "always_treat_brackets_as_autoclosed": true,
     // Python sucks
     "languages": {
         "Python": {
@@ -63,7 +65,7 @@
                 "external": {
                     "command": "/usr/bin/clang-format",
                     "arguments": [
-                        "--style={BasedOnStyle: Microsoft, ColumnLimit: 80}",
+                        "--style={BasedOnStyle: Microsoft, ColumnLimit: 100}",
                         "-",
                         "--assume-filename={buffer_path}"
                     ]
@@ -72,6 +74,7 @@
             "format_on_save": "on"
         }
     },
+    "experimental.theme_overrides": {},
     // sexteen
     "ui_font_size": 16,
     "buffer_font_size": 16

@@ -9,24 +9,56 @@
     {
         "context": "Workspace",
         "bindings": {
-            "shift shift": "file_finder::Toggle"
+            "alt-o": "file_finder::Toggle",
+            "alt-f o": [
+                "projects::OpenRecent",
+                {
+                    "create_new_window": false
+                }
+            ],
+            "alt-k": [
+                "workspace::ActivatePaneInDirection",
+                "Up"
+            ],
+            "alt-j": [
+                "workspace::ActivatePaneInDirection",
+                "Down"
+            ],
+            "alt-f h": [
+                "workspace::ActivatePaneInDirection",
+                "Left"
+            ],
+            "alt-f l": [
+                "workspace::ActivatePaneInDirection",
+                "Right"
+            ],
+            "alt-f t": "workspace::ToggleBottomDock",
         }
     },
     {
         "context": "Editor",
         "bindings": {
             "alt-f z": "workspace::ToggleZoom",
-            "alt-f l": "project_panel::ToggleFocus",
-            "alt-j": "terminal_panel::ToggleFocus",
+            "alt-f d": "workspace::ToggleRightDock",
+            // "alt-j": "terminal_panel::ToggleFocus",
             "alt-f w": "tab_switcher::Toggle",
             "alt-h": "pane::ActivatePrevItem",
-            "alt-l": "pane::ActivateNextItem"
+            "alt-l": "pane::ActivateNextItem",
+            "alt-f |": "pane::SplitRight",
+            "alt-f -": "pane::SplitDown"
+        }
+    },
+    {
+        "context": "VimControl && !menu",
+        "bindings": {
+            "alt-n": "vim::ScrollDown",
+            "alt-u": "vim::ScrollUp",
         }
     },
     {
         "context": "ProjectPanel",
         "bindings": {
-            "alt-f h": "project_panel::ToggleFocus"
+            "alt-f d": "workspace::ToggleRightDock"
         }
     },
     {
@@ -40,7 +72,7 @@
     {
         "context": "Terminal",
         "bindings": {
-            "alt-k": "terminal_panel::ToggleFocus"
+            // "alt-k": "terminal_panel::ToggleFocus"
         }
     }
 ]

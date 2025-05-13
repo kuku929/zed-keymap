@@ -72,5 +72,5 @@
     "buffer_font_size": 20,
     "buffer_line_height": "standard",
     // "ui_font_family": "Fixedsys Excelsior",
-    "buffer_font_family": "Fixedsys Excelsior"
+    // "buffer_font_family": "Fixedsys Excelsior"
 }

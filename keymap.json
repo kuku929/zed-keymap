@@ -16,22 +16,10 @@
                     "create_new_window": false
                 }
             ],
-            "alt-k": [
-                "workspace::ActivatePaneInDirection",
-                "Up"
-            ],
-            "alt-j": [
-                "workspace::ActivatePaneInDirection",
-                "Down"
-            ],
-            "alt-f h": [
-                "workspace::ActivatePaneInDirection",
-                "Left"
-            ],
-            "alt-f l": [
-                "workspace::ActivatePaneInDirection",
-                "Right"
-            ],
+            "alt-k": "workspace::ActivatePaneUp",
+            "alt-j": "workspace::ActivatePaneDown",
+            "alt-f h": "workspace::ActivatePaneLeft",
+            "alt-f l": "workspace::ActivatePaneRight",
             "alt-f t": "workspace::ToggleBottomDock",
         }
     },
@@ -42,10 +30,19 @@
             "alt-f d": "workspace::ToggleRightDock",
             // "alt-j": "terminal_panel::ToggleFocus",
             "alt-f w": "tab_switcher::Toggle",
-            "alt-h": "pane::ActivatePrevItem",
+            "alt-h": "pane::ActivatePreviousItem",
             "alt-l": "pane::ActivateNextItem",
             "alt-f |": "pane::SplitRight",
-            "alt-f -": "pane::SplitDown"
+            "alt-f -": "pane::SplitDown",
+            "ctrl-enter": "editor::NewlineBelow",
+            "ctrl-m": "editor::MoveToEnclosingBracket",
+        }
+    },
+    {
+        "context": "Editor && vim_mode == insert",
+        "bindings": {
+            "ctrl-enter": "editor::NewlineBelow",
+            "ctrl-d": "editor::SelectNext"
         }
     },
     {
@@ -65,7 +62,7 @@
         "context": "TabSwitcher",
         "bindings": {
             "j": "menu::SelectNext",
-            "k": "menu::SelectPrev",
+            "k": "menu::SelectPrevious",
             "x": "tab_switcher::CloseSelectedItem"
         }
     },
@@ -73,6 +70,16 @@
         "context": "Terminal",
         "bindings": {
             // "alt-k": "terminal_panel::ToggleFocus"
+        }
+    },
+    // from https://github.com/zed-industries/zed/discussions/11474
+    {
+        "context": "Editor && showing_completions",
+        "bindings": {
+            "enter": "editor::Newline",
+            "escape": "editor::Cancel",
+            "shift enter": "editor::ConfirmCompletion",
+            "tab": "editor::Tab"
         }
     }
 ]

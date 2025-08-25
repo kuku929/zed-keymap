@@ -16,63 +16,69 @@
                     "create_new_window": false
                 }
             ],
-            "alt-k": [
-                "workspace::ActivatePaneInDirection",
-                "Up"
-            ],
-            "alt-j": [
-                "workspace::ActivatePaneInDirection",
-                "Down"
-            ],
-            "alt-f h": [
-                "workspace::ActivatePaneInDirection",
-                "Left"
-            ],
-            "alt-f l": [
+            "alt-l": [
                 "workspace::ActivatePaneInDirection",
                 "Right"
             ],
-            "alt-f t": "workspace::ToggleBottomDock",
+            "alt-h": [
+                "workspace::ActivatePaneInDirection",
+                "Left"
+            ],
+            "alt-f z": "workspace::CloseAllDocks",
+            "alt-f h": "workspace::ToggleLeftDock",
+            "alt-f l": "workspace::ToggleRightDock"
         }
     },
     {
         "context": "Editor",
         "bindings": {
-            "alt-f z": "workspace::ToggleZoom",
-            "alt-f d": "workspace::ToggleRightDock",
-            // "alt-j": "terminal_panel::ToggleFocus",
             "alt-f w": "tab_switcher::Toggle",
-            "alt-h": "pane::ActivatePrevItem",
-            "alt-l": "pane::ActivateNextItem",
+            "alt-j": "tab_switcher::Toggle",
+            // "alt-k": "tab_switcher::Toggle",
             "alt-f |": "pane::SplitRight",
-            "alt-f -": "pane::SplitDown"
+            "alt-f -": "pane::SplitDown",
+            "ctrl-enter": "editor::NewlineBelow",
+            "ctrl-m": "editor::MoveToEnclosingBracket"
+        }
+    },
+    {
+        "context": "ProjectPanel && not_editing",
+        "bindings": {
+            "alt-f l": "workspace::ToggleLeftDock"
+        }
+    },
+    {
+        "context": "Terminal",
+        "bindings": {
+            "alt-f h": "workspace::ToggleRightDock"
         }
     },
     {
         "context": "VimControl && !menu",
         "bindings": {
             "alt-n": "vim::ScrollDown",
-            "alt-u": "vim::ScrollUp",
-        }
-    },
-    {
-        "context": "ProjectPanel",
-        "bindings": {
-            "alt-f d": "workspace::ToggleRightDock"
+            "alt-u": "vim::ScrollUp"
         }
     },
     {
         "context": "TabSwitcher",
         "bindings": {
+            "alt-j": "menu::SelectNext",
+            "alt-k": "menu::SelectPrev",
+            "alt-x": "tab_switcher::CloseSelectedItem",
             "j": "menu::SelectNext",
             "k": "menu::SelectPrev",
             "x": "tab_switcher::CloseSelectedItem"
         }
     },
+    // from https://github.com/zed-industries/zed/discussions/11474
     {
-        "context": "Terminal",
+        "context": "Editor && showing_completions",
         "bindings": {
-            // "alt-k": "terminal_panel::ToggleFocus"
+            "enter": "editor::Newline",
+            "escape": "editor::Cancel",
+            "shift-enter": "editor::ConfirmCompletion",
+            "tab": "editor::Tab"
         }
     }
 ]

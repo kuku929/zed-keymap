@@ -1,7 +1,7 @@
 {
     // Ctrl+c Ctrl+v settings---
     "features": {
-        "inline_completion_provider": "copilot"
+        "inline_completion_provider": "none"
     },
     "cursor_blink": false,
     "relative_line_numbers": true,
@@ -11,18 +11,44 @@
     "scroll_beyond_last_line": "off",
     "vertical_scroll_margin": 0,
     "gutter": {
-        "line_numbers": true
+        "line_numbers": true,
+        "folds": false,
+        "runnables": false,
+        "code_actions": false
+    },
+    "tab_bar": {
+        "show": false
     },
     //-------------------------
     "current_line_highlight": "gutter",
     "terminal": {
-        "dock": "bottom"
-    },
-    "project_panel": {
         "dock": "right"
     },
-    "base_keymap": "VSCode",
-    "theme": "Nord Light",
+    "project_panel": {
+        "dock": "left"
+    },
+    "git": {
+        "git_gutter": "hide",
+        "inline_blame": null,
+        "gutter_debounce": 0
+    },
+    "chat_panel": {
+        "button": false,
+        "dock": null
+    },
+    "notification_panel": {
+        "button": false
+    },
+    "assistant": {
+        "version": "1",
+        "button": false,
+        "dock": "bottom"
+    },
+    "collaboration_panel": {
+        "button": false
+    },
+    "base_keymap": "SublimeText",
+    "theme": "Kanagawa Dragon",
     "autosave": "on_focus_change",
     "vim_mode": true,
     "hard_tabs": false,
@@ -60,7 +86,8 @@
                     "arguments": [
                         "--style={BasedOnStyle: Microsoft, ColumnLimit: 100}",
                         "-",
-                        "--assume-filename={buffer_path}"
+                        "--assume-filename={buffer_path}",
+                        "--function-arg-placeholders=0"
                     ]
                 }
             },
@@ -69,8 +96,6 @@
     },
     "experimental.theme_overrides": {},
     "ui_font_size": 16,
-    "buffer_font_size": 20,
-    "buffer_line_height": "standard",
-    // "ui_font_family": "Fixedsys Excelsior",
-    "buffer_font_family": "Fixedsys Excelsior"
+    "buffer_font_size": 17,
+    "buffer_line_height": "standard"
 }

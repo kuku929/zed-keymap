@@ -67,7 +67,7 @@
             "alt-k": "menu::SelectPrev",
             "alt-x": "tab_switcher::CloseSelectedItem",
             "j": "menu::SelectNext",
-            "k": "menu::SelectPrev",
+            "k": "menu::SelectPrevious",
             "x": "tab_switcher::CloseSelectedItem"
         }
     },
@@ -78,6 +78,16 @@
             "enter": "editor::Newline",
             "escape": "editor::Cancel",
             "shift-enter": "editor::ConfirmCompletion",
+            "tab": "editor::Tab"
+        }
+    },
+    // from https://github.com/zed-industries/zed/discussions/11474
+    {
+        "context": "Editor && showing_completions",
+        "bindings": {
+            "enter": "editor::Newline",
+            "escape": "editor::Cancel",
+            "shift enter": "editor::ConfirmCompletion",
             "tab": "editor::Tab"
         }
     }

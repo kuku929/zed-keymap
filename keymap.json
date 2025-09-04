@@ -34,11 +34,12 @@
         "bindings": {
             "alt-f w": "tab_switcher::Toggle",
             "alt-j": "tab_switcher::Toggle",
-            // "alt-k": "tab_switcher::Toggle",
             "alt-f |": "pane::SplitRight",
             "alt-f -": "pane::SplitDown",
             "ctrl-enter": "editor::NewlineBelow",
-            "ctrl-m": "editor::MoveToEnclosingBracket"
+            "ctrl-m": "editor::MoveToEnclosingBracket",
+            "alt-u": "project_symbols::Toggle",
+            "alt-i": "outline::Toggle"
         }
     },
     {
@@ -55,10 +56,7 @@
     },
     {
         "context": "VimControl && !menu",
-        "bindings": {
-            "alt-n": "vim::ScrollDown",
-            "alt-u": "vim::ScrollUp"
-        }
+        "bindings": {}
     },
     {
         "context": "TabSwitcher",
@@ -67,7 +65,7 @@
             "alt-k": "menu::SelectPrev",
             "alt-x": "tab_switcher::CloseSelectedItem",
             "j": "menu::SelectNext",
-            "k": "menu::SelectPrevious",
+            "k": "menu::SelectPrev",
             "x": "tab_switcher::CloseSelectedItem"
         }
     },
